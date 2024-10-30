@@ -1,7 +1,5 @@
 # Process
 
-## Find and kill a process
-
 Check active connections for a specific port:
 
 ```
