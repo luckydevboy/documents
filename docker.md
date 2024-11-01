@@ -18,13 +18,30 @@ Remove an image:
 docker rmi <image-name>
 ```
 
-# Container
+Remove unused images:
 
+```
+docker image prune
+```
+
+# Container
 
 Run a container from an image and persist data:
 
 ```
 docker run -d -p <host-port>:<container-port> -v <host-path>:<container-path> <image-name>
+```
+
+Share source code:
+
+Linux:
+```
+docker run -d -p <host-port>:<container-port> -v $(pwd):<container-path> <image-name>
+```
+
+Windows:
+```
+docker run -d -p <host-port>:<container-port> -v ${PWD}:<container-path> <image-name>
 ```
 
 List all running containers:
@@ -57,10 +74,22 @@ Remove a container:
 docker rm <container-id>
 ```
 
+Interactive mode:
+
+```
+docker run -it <image-name>
+```
+
 Run a command in a running container:
 
 ```
 docker exec -it <container-id> <command>
+```
+
+Remove unused containers:
+
+```
+docker container prune
 ```
 
 # Volume
